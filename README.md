@@ -31,7 +31,7 @@
 
 # 📖 Awesome Books <a name="about-project"></a>
 
-A Leaderboard  is a webpack project where you can stor the name and score.
+A Leaderboard  is a webpack project where you can store the name and score.
 
 ## 🛠 Built With <a name="built-with"></a>
 
