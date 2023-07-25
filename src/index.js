@@ -1,23 +1,30 @@
 import './style.css';
 import display from './modules/display.js';
+import { getAPI, setAPI } from './modules/api.js';
 
-const data = [
-  {
-    name: 'anshuman',
-    score: 25,
-  },
-  {
-    name: 'jack',
-    score: 56,
-  },
-  {
-    name: 'ajay',
-    score: 55,
-  },
-  {
-    name: 'manmohan',
-    score: 77,
-  },
-];
+const getScore = async () => {
+  const scores = await getAPI();
+  display(scores);
+};
+const form = document.querySelector('form');
 
-display(data);
+form.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  const name = document.querySelector('.name');
+  const score = document.querySelector('.score');
+  const playername = name.value.trim();
+  const playerscore = score.value.trim();
+  const data = {
+    user: playername,
+    score: playerscore,
+  };
+  name.value = '';
+  score.value = '';
+  await setAPI(data);
+});
+
+document.querySelector('.refresh').addEventListener('click', () => {
+  getScore();
+});
+
+getScore();
