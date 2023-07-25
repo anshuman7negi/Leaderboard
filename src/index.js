@@ -15,14 +15,12 @@ form.addEventListener('submit', async (event) => {
   const score = document.querySelector('.score');
   const playername = name.value.trim();
   const playerscore = score.value.trim()
-  console.log(playername)
   const data = {
     user: playername,
     score: playerscore,
   };
   name.value = '';
   score.value = '';
-  console.log(data);
   await setAPI(data);
 });
 
