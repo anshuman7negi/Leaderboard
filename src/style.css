@@ -12,12 +12,18 @@ main {
   height: 100vh;
   padding: 2rem;
   gap: 5rem;
+  background-color: #ddd;
 }
 
 h1 {
+  background-color: black;
   font-size: 45px;
   font-weight: 800;
   margin: 0 auto;
+  border-radius: 20%;
+  padding: 1rem;
+  color: white;
+  box-shadow: 0px 7px 35px 0 rgb(232 235 20);
 }
 
 h2 {
@@ -78,6 +84,7 @@ button {
   padding: 0.4rem;
   max-width: 20%;
   box-shadow: 4px 3px 1px 0 rgb(23 22 22);
+  border-radius: 20%;
 }
 
 button:hover {
